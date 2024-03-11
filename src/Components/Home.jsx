@@ -17,7 +17,6 @@ function Home() {
 
   return (
     <>
-    <h1>Hello</h1>
       <h1 className="home-title">NC News</h1>
       <main>
         <ArticleCard articles={articles} />

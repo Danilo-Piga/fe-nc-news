@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { UserContext } from "./userContext"
 import { useContext } from "react"
+import './Nav.css'
 
 function Nav () {
 

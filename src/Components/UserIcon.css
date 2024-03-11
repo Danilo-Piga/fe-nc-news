@@ -1,0 +1,24 @@
+
+/* Style the user icon */
+.user-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+/* Additional styling for the list item */
+li {
+  list-style: none;
+  text-align: center;
+}
+
+/* Styling for the button */
+button {
+  background-color: #e6e7e8;
+  color: #615f5f;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}

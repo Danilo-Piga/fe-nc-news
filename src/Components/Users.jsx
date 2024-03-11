@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { fetchUsers } from "../Utils/api";
 import { UserContext } from "./userContext";
+import './UserIcon.css'
 
 function Users() {
 
