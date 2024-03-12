@@ -1,50 +1,54 @@
 .Comments {
-    margin-top: 4px;
-  }
-  
-  .comments-header {
-    font-size: 24px;
-    margin-bottom: 5px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .comment {
-    background-color: #e6e8e8;
-    border-radius: 5px;
-    padding: 40px;
-    margin-bottom: 15px;
-    box-shadow: 0 0 0 1px #838383;
-  }
-  
-  .comment h2 {
-    font-size: 30px;
-    margin-bottom: 5px;
-    color: #333;
-    text-align: left;
-  }
-  
-  .comment p {
-    font-size: 16px;
-    color: #666;
-    text-align: left;
-    
-    margin-bottom: 5px;
-  }
-  
-  .comment p:last-child {
-    margin-bottom: 0;
-  }
-  
-  .comment .posted-on {
-    color: #888;
+  margin-top: 16px; 
+  padding: 0 16px; 
+}
 
-  }
-  
-  .comment .votes {
-    color: #007bff;
-  }
-  
+.comments-header {
+  font-size: 18px; 
+  color: #172B4D; 
+  margin-bottom: 8px; 
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comment {
+  background-color: #f5f5f5; 
+  text-align: left;
+  border-radius: 3px; 
+  padding: 16px; 
+  margin-bottom: 8px; 
+  border: 1px solid #ddd; 
+}
+
+.comment h2 {
+  font-size: 16px; 
+  margin-bottom: 4px;
+  color: #172B4D; 
+  font-weight: bold; 
+}
+
+.comment p {
+  font-size: 14px; 
+  color: #333; 
+  text-align: left;
+  line-height: 1.5; 
+  margin-bottom: 4px; 
+}
+
+.comment p:last-child {
+  margin-bottom: 0;
+}
+
+.comment .posted-on,
+.comment .votes {
+  color: #999; 
+  font-size: 12px; 
+  margin-bottom: 4px; 
+}
+
+.comment .votes {
+  font-weight: bold; 
+}

@@ -1,23 +1,21 @@
 .vote-buttons-container {
-  display: flex;
-  align-items: center;
+  display: inline-block;
 }
 
 .vote-button {
-  background-color: #2e91fb;
-  color: #fff;
+  background-color: transparent;
+  color: #333;
   border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
+  font-size: 20px;
   cursor: pointer;
-  margin-right: 10px;
 }
 
-.vote-button:hover {
-  background-color: #0056b3;
+.vote-button.voted {
+  border: 2px solid rgb(11, 144, 189);
 }
 
 .vote-count {
   font-size: 16px;
-  color: #333;
+  color: #0eaeda;
+  margin-left: 5px;
 }

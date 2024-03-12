@@ -38,8 +38,12 @@ function Votes({ article, setArticle, article_id }) {
   }
 
   return (
-    <div className="vote-buttons-container">
-      <button className="vote-button" onClick={handleClick}>
+    <div className={`vote-buttons-container ${voted ? "voted" : ""}`}>
+      <button
+        className={`vote-button ${voted ? "voted" : ""}`}
+        style={{ background: voted ? "lightblue" : "transparent" }}
+        onClick={handleClick}
+      >
         👍🏼
       </button>
       <p className="vote-count"> {article.votes} likes </p>

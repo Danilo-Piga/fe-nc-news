@@ -1,0 +1,55 @@
+.comment-adder {
+    margin-top: 16px; 
+    padding: 0 16px; 
+  }
+  
+  .comment-adder form {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+  
+  .comment-adder textarea {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 16px;
+    resize: none; 
+    font-size: 14px; 
+    color: #333;
+    margin-bottom: 8px; 
+  }
+  
+  .comment-adder textarea::placeholder {
+    color: #999; 
+  }
+  
+  .comment-adder button {
+    background-color: #007bff; 
+    color: #fff; 
+    border: none;
+    border-radius: 3px;
+    padding: 8px 16px;
+    cursor: pointer; 
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .comment-adder button:hover {
+    background-color: #0067cc; 
+  }
+  
+  .comment-adder button[disabled] {
+    background-color: #cccccc; 
+    cursor: default; 
+  }
+  
+  .comment-adder p {
+    font-size: 12px; 
+    color: #999; 
+    margin-bottom: 0; 
+  }
+  
+  .comment-adder .comment-success-message {
+    color: green; 
+  }
+  
