@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { fetchArticles } from "../Utils/api";
-import ArticleCard from "./ArticleCard";
+import { fetchArticles } from "../../Utils/api";
+import ArticleCard from "../ArticleCard/ArticleCard";
 
 function Home() {
   const [articles, setArticles] = useState([]);
@@ -13,7 +13,7 @@ function Home() {
     });
   }, []);
 
-  if (isLoading) return <p>Loading ...</p>
+  if (isLoading) return <p>Loading ...</p>;
 
   return (
     <>

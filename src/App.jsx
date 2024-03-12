@@ -2,12 +2,12 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UserContext } from "./Components/userContext";
 import { useState } from "react";
-import Home from "./Components/Home";
-import Nav from "./Components/Nav";
-import Users from "./Components/Users";
-import Topics from "./Components/Topics";
-import SingleArticle from './Components/SingleArticle'
-import ArticleComments from "./Components/ArticleComments";
+import Home from "./Components/Home/Home";
+import Nav from "./Components/Nav/Nav";
+import Users from "./Components/Users/Users";
+import Topics from "./Components/Topics/Topics";
+import SingleArticle from "./Components/SingleArticle/SingleArticle";
+import ArticleComments from "./Components/ArticleComments/ArticleComments";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({
@@ -26,8 +26,14 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/topics" element={<Topics />}></Route>
             <Route path="/users" element={<Users />}></Route>
-            <Route path="/articles/:article_id" element={<SingleArticle currentUser={currentUser}/>}></Route>
-            <Route path="/articles/:article_id/comments" element={<ArticleComments />}></Route>
+            <Route
+              path="/articles/:article_id"
+              element={<SingleArticle currentUser={currentUser} />}
+            ></Route>
+            <Route
+              path="/articles/:article_id/comments"
+              element={<ArticleComments />}
+            ></Route>
           </Routes>
         </>
       </UserContext.Provider>
