@@ -7,6 +7,7 @@ import Nav from "./Components/Nav";
 import Users from "./Components/Users";
 import Topics from "./Components/Topics";
 import SingleArticle from './Components/SingleArticle'
+import ArticleComments from "./Components/ArticleComments";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({
@@ -26,6 +27,7 @@ function App() {
             <Route path="/topics" element={<Topics />}></Route>
             <Route path="/users" element={<Users />}></Route>
             <Route path="/articles/:article_id" element={<SingleArticle currentUser={currentUser}/>}></Route>
+            <Route path="/articles/:article_id/comments" element={<ArticleComments />}></Route>
           </Routes>
         </>
       </UserContext.Provider>
