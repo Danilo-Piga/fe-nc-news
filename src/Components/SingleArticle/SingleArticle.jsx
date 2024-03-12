@@ -5,6 +5,7 @@ import moment from "moment";
 import "./SingleArticle.css";
 import ArticleComments from "../ArticleComments/ArticleComments";
 import Votes from "../Votes/Votes";
+import CommentAdder from "../CommentAdder/CommentAdder";
 
 function SingleArticle({ currentUser }) {
   const [article, setArticle] = useState([]);
@@ -31,6 +32,11 @@ function SingleArticle({ currentUser }) {
           article={article}
           setArticle={setArticle}
           article_id={article_id}
+        />
+        <CommentAdder
+          setArticleComments={setArticleComments}
+          currentUser={currentUser}
+          setFetchedComments={setFetchedComments}
         />
         <ArticleComments
           articleComments={articleComments}

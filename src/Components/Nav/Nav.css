@@ -1,32 +1,36 @@
-.nav-user-icon {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-}
-
 .nav {
-  background-color: #007bff; 
-  border-radius: 30px;
-  padding: 5px;
+  background-color: #f6f6f6;
+  border-radius: 3px;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5vh;
+  z-index: 10;
 }
 
-.nav a {
-  color: #fff; 
+.nav a,
+.nav-link,
+.profile-link {
+  color: #172b4d;
   text-decoration: none;
   margin-right: 20px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav-link:hover,
+.profile-link:hover {
   text-decoration: underline;
 }
 
 .profile {
-  color: #fff;
-  font-size: 16px;
+  color: #172b4d;
   display: flex;
   align-items: center;
 }

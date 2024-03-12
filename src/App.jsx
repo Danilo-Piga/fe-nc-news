@@ -7,7 +7,6 @@ import Nav from "./Components/Nav/Nav";
 import Users from "./Components/Users/Users";
 import Topics from "./Components/Topics/Topics";
 import SingleArticle from "./Components/SingleArticle/SingleArticle";
-import ArticleComments from "./Components/ArticleComments/ArticleComments";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({
@@ -29,10 +28,6 @@ function App() {
             <Route
               path="/articles/:article_id"
               element={<SingleArticle currentUser={currentUser} />}
-            ></Route>
-            <Route
-              path="/articles/:article_id/comments"
-              element={<ArticleComments />}
             ></Route>
           </Routes>
         </>
