@@ -52,3 +52,13 @@ ul {
 .comment .votes {
   font-weight: bold; 
 }
+
+.button {
+  background-color: #d53e3e; 
+    color: #fff; 
+    border: none;
+    border-radius: 3px;
+    padding: 8px 16px;
+    cursor: pointer; 
+    transition: background-color 0.2s ease-in-out;
+}
