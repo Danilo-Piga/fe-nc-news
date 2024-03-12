@@ -1,25 +1,24 @@
-/* Style the home title */
+
 .home-title {
     text-align: center;
     font-size: 36px;
     margin-bottom: 20px;
   }
   
-  /* Style the main container */
+  
   main {
     display: flex;
     justify-content: center;
   }
   
-  /* Style the article card container */
+ 
   .article-card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     padding: 20px;
   }
   
-  /* Style the individual article card */
+  
   .article-card {
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -27,19 +26,19 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Style the article card title */
+
   .article-card h2 {
     font-size: 24px;
     margin-bottom: 10px;
   }
   
-  /* Style the article card metadata */
+  
   .article-card h3 {
     font-size: 16px;
     color: #666;
   }
   
-  /* Style the article card image */
+ 
   .article-card img {
     width: 100%;
     height: auto;
@@ -47,7 +46,7 @@
     margin-bottom: 10px;
   }
   
-  /* Style the article card body */
+  
   .article-card p {
     font-size: 18px;
     line-height: 1.6;

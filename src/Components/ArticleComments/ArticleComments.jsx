@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { fetchCommentsByArticle } from "../Utils/api";
+import { fetchCommentsByArticle } from "../../Utils/api";
 import { useParams } from "react-router";
 import moment from "moment";
-import './ArticleComments.css'
+import "./ArticleComments.css";
 
 function ArticleComments({
   articleComments,

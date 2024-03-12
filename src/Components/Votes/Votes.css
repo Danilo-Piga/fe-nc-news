@@ -1,0 +1,23 @@
+.vote-buttons-container {
+  display: flex;
+  align-items: center;
+}
+
+.vote-button {
+  background-color: #2e91fb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.vote-button:hover {
+  background-color: #0056b3;
+}
+
+.vote-count {
+  font-size: 16px;
+  color: #333;
+}
