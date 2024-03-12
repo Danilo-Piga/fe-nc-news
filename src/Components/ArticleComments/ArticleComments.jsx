@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchCommentsByArticle } from "../../Utils/api";
+import { fetchCommentsByArticle, deleteComment } from "../../Utils/api";
 import { useParams } from "react-router";
 import moment from "moment";
 import "./ArticleComments.css";
@@ -10,14 +10,31 @@ function ArticleComments({
   fetchedComments,
 }) {
   const [isLoading, setIsLoading] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
   const { article_id } = useParams();
+
+  const handleDeleteSuccess = async (commentId) => {
+    try {
+      setIsDeleting(true);
+
+      await deleteComment(commentId);
+      setArticleComments((prevComments) =>
+        prevComments.filter((comment) => comment.comment_id !== commentId)
+      );
+
+      setIsDeleting(false);
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+      setIsDeleting(false);
+    }
+  };
 
   useEffect(() => {
     fetchCommentsByArticle(article_id).then(({ comments }) => {
       setArticleComments(comments);
       setIsLoading(false);
     });
-  }, [fetchedComments]);
+  }, [fetchedComments, article_id]);
 
   if (isLoading) return <p>Loading...</p>;
   if (!isLoading && articleComments.length === 0) return <p>No comments</p>;
@@ -37,6 +54,14 @@ function ArticleComments({
                   Posted on {moment(`${created_at}`).format("Do MMMM YYYY")}{" "}
                 </p>
                 <p>Votes: {votes}</p>
+                {!isDeleting && (
+                  <button className="button"
+                    onClick={() => handleDeleteSuccess(comment_id)}
+                    disabled={isDeleting}
+                  >
+                    Delete
+                  </button>
+                )}
               </li>
             );
           }
