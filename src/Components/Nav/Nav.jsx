@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../userContext";
 import { useContext } from "react";
 import "./Nav.css";
+import Logo from "../../assets/logo.png";
 
 function Nav() {
   const { currentUser } = useContext(UserContext);
   return (
     <nav className="nav">
-      <Link to="/" className="nav-link">
-        Home
+      <Link to="/">
+        <img src={Logo} className="nav-logo" />
       </Link>
       <Link to="/topics" className="nav-link">
         Topics

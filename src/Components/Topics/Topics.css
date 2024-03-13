@@ -1,0 +1,29 @@
+.topics-container {
+    margin-top: 20px;
+  }
+  
+  .topics {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .topic-item {
+    margin-bottom: 10px;
+  }
+  
+  .topic-link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .topic-box {
+    border: 1px solid #7c7b7b;
+    background-color:#f6f6f6;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .topic-slug {
+    margin: 0;
+  }
+  

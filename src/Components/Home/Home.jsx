@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchArticles } from "../../Utils/api";
 import ArticleCard from "../ArticleCard/ArticleCard";
+import '../Home/Home.css'
 
 function Home() {
   const [articles, setArticles] = useState([]);
@@ -17,8 +18,8 @@ function Home() {
 
   return (
     <>
-      <h1 className="home-title">NC News</h1>
       <main>
+      <h1 className="home-title">Welcome to NC News</h1>
         <ArticleCard articles={articles} />
       </main>
     </>
