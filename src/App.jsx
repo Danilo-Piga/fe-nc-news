@@ -7,8 +7,9 @@ import Nav from "./Components/Nav/Nav";
 import Users from "./Components/Users/Users";
 import Topics from "./Components/Topics/Topics";
 import SingleArticle from "./Components/SingleArticle/SingleArticle";
-import ArticlesByTopic from "./Components/ArticlesByTopic";
+import ArticlesByTopic from "./Components/ArticleByTopic/ArticlesByTopic";
 import ArticleComments from "./Components/ArticleComments/ArticleComments";
+import ErrorPage from "./Components/ErrorPage/ErrorPage";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({
@@ -18,19 +19,38 @@ function App() {
       "https://vignette.wikia.nocookie.net/mrmen/images/4/4f/MR_JELLY_4A.jpg/revision/latest?cb=20180104121141",
   });
 
+  const [error, setError] = useState(null);
+  const handleError = (errorMessage) => {
+    setError(errorMessage);
+  };
+
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ currentUser, setCurrentUser }}>
         <>
           <Nav />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/topics" element={<Topics />}></Route>
-            <Route path="/users" element={<Users />}></Route>
-            <Route path="/articles/:article_id" element={<SingleArticle currentUser={currentUser} />}></Route>
-            <Route path="/articles/topics/:topic" element={<ArticlesByTopic />}></Route>
-            <Route path="/articles/:article_id/comments" element={<ArticleComments />}></Route>
-          </Routes>
+          {error ? (
+            <ErrorPage message={error} />
+          ) : (
+            <Routes>
+              <Route path="/" element={<Home handleError={handleError} />} />
+              <Route path="/topics" element={<Topics handleError={handleError} />} />
+              <Route path="/users" element={<Users handleError={handleError} />} />
+              <Route
+                path="/articles/:article_id"
+                element={<SingleArticle currentUser={currentUser} handleError={handleError} />}
+              />
+              <Route
+                path="/articles/topics/:topic"
+                element={<ArticlesByTopic handleError={handleError} />}
+              />
+              <Route
+                path="/articles/:article_id/comments"
+                element={<ArticleComments handleError={handleError} />}
+              />
+              <Route path="*" element={<ErrorPage message={"404 - Page Not Found"} />} />
+            </Routes>
+          )}
         </>
       </UserContext.Provider>
     </BrowserRouter>
