@@ -1,21 +1,31 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { fetchTopics } from "../../Utils/api";
-import '../Topics/Topics.css'
+import "../Topics/Topics.css";
 
 function Topics() {
   const [topics, setTopics] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
-    fetchTopics().then((data) => { 
-      setTopics(data); 
-      setIsLoading(false);
-    });
+    fetchTopics()
+      .then((data) => {
+        setTopics(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setError("Error fetching topics. Please try again later."); 
+        setIsLoading(false);
+      });
   }, []);
 
   if (isLoading) {
     return <h2>Loading...</h2>;
+  }
+
+  if (error) {
+    return <h2>{error}</h2>; 
   }
 
   return (
