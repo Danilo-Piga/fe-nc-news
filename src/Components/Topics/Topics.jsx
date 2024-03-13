@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { fetchTopics } from "../../Utils/api";
+import '../Topics/Topics.css'
 
 function Topics() {
   const [topics, setTopics] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetchTopics().then(({ topics }) => {
-      setTopics(topics);
+    fetchTopics().then((data) => { 
+      setTopics(data); 
       setIsLoading(false);
     });
   }, []);

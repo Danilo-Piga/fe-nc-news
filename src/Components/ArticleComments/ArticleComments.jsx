@@ -54,14 +54,14 @@ function ArticleComments({
                   Posted on {moment(`${created_at}`).format("Do MMMM YYYY")}{" "}
                 </p>
                 <p>Votes: {votes}</p>
-                {!isDeleting && (
-                  <button className="button"
-                    onClick={() => handleDeleteSuccess(comment_id)}
-                    disabled={isDeleting}
-                  >
-                    Delete
-                  </button>
-                )}
+                <button
+                  className="button"
+                  onClick={() => handleDeleteSuccess(comment_id)}
+                  disabled={isDeleting}
+                >
+                  Delete
+                </button>
+                {isDeleting && <button disabled>Deleting...</button>}
               </li>
             );
           }
