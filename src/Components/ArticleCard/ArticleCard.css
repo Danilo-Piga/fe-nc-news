@@ -49,3 +49,11 @@
   font-weight: bold;
   text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+  .article-card {
+    width: 100%;
+    max-width: 300px; 
+    margin: 10px auto; 
+  }
+}
