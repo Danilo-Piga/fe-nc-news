@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchArticlesByTopic } from "../../Utils/api";
 import { useState } from "react";
 import ArticleCard from "../ArticleCard/ArticleCard";
+import './ArticleByTopic.css'
 
 export default function ArticlesByTopic() {
   const [articles, setArticles] = useState([]);

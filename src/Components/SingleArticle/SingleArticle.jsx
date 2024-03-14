@@ -34,7 +34,7 @@ function SingleArticle({ currentUser }) {
       <div key={article.article_id}>
         <h2 className="article-title">{article.title}</h2>
         <h3>
-          Written by {article.author} on<br></br>{" "}
+          Author: {article.author} <br></br>{" "}
           {moment(`${article.created_at}`).format("Do MMMM YYYY")}{" "}
         </h3>
         <img src={article.article_img_url} />

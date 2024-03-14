@@ -22,7 +22,7 @@ function Home() {
   return (
     <>
       <main>
-      <h1 className="home-title">Welcome to NC News</h1>
+      <h1 className="home-title">Welcome to NC News 🗞️</h1>
         <ArticleCard articles={articles} />
       </main>
     </>

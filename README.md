@@ -47,7 +47,7 @@ npm run dev
 ```
 You will then see the following confirmation in the terminal. 
 
-```bash
+```console
  VITE v5.1.5  ready in 363 ms
 
   ➜  Local:   http://localhost:5173/
@@ -56,7 +56,7 @@ You will then see the following confirmation in the terminal.
   ```
 You will then need to either `cmd` or `ctrl` click on the url to load the webpage.  
 
-```javascript 
+```console
 http://localhost:5173/
 ```
 
