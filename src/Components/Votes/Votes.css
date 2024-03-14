@@ -11,11 +11,11 @@
 }
 
 .vote-button.voted {
-  border: 2px solid rgb(11, 144, 189);
+  border: 2px solid rgb(32, 151, 198);
 }
 
 .vote-count {
   font-size: 16px;
-  color: #0eaeda;
+  color: #01242e;
   margin-left: 5px;
 }

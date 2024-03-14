@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { fetchUsers } from "../../Utils/api";
 import { UserContext } from "../userContext";
-import "./UserIcon.css";
+import "./UserIcon.css"; // Assuming you renamed UserIcon.css to Users.css
 
 function Users() {
   const { setCurrentUser } = useContext(UserContext);
@@ -15,21 +15,20 @@ function Users() {
 
   return (
     <main>
-      <ul className="users">
+      <ul className="users-list">
         {users.map((user) => {
           return (
-            <li key={user.username}>
-              <h2>{user.username}</h2>
-              <img
-                src={user.avatar_url}
-                className="user-icon"
-                style={{ width: 170, height: 170 }}
-              />
-              <p className="">{user.kudos}</p>
+            <li key={user.username} className="user-card">
+              <img src={user.avatar_url} alt={user.username} className="user-icon" />
+              <div className="user-info">
+                <h2 className="user-name">{user.username}</h2>
+                <p className="user-kudos">Kudos: {user.kudos}</p>
+              </div>
               <button
                 onClick={() => {
                   setCurrentUser(user);
                 }}
+                className="select-profile-btn"
               >
                 Select Profile
               </button>

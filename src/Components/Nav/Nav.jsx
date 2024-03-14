@@ -9,7 +9,7 @@ function Nav() {
   return (
     <nav className="nav">
       <Link to="/">
-        <img src={Logo} className="nav-logo" />
+        <img src={Logo} alt="Silhouette of Reddit icon, as the home button" className="nav-logo" />
       </Link>
       <Link to="/topics" className="nav-link">
         Topics
