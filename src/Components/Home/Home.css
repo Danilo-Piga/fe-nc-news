@@ -1,24 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 .home-title {
-    font-size: 8rem;
-    border: 50px;
-    color: #135261;
-    text-align:left;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    margin-top: 70px;
-    margin-bottom: 0.1rem;
-    letter-spacing: 0.1rem;
-    line-height: 1;
-    text-wrap:balance;
+  font-size: 8rem;
+  border: 50px;
+  color: #135261;
+  text-align: left;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  margin-top: 120px;
+  margin-bottom: 0.1rem;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .home-title {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 120px;
   }
-  
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-  }
-  
+}

@@ -6,7 +6,7 @@ import "../Topics/Topics.css";
 function Topics() {
   const [topics, setTopics] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null); 
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetchTopics()
@@ -15,33 +15,46 @@ function Topics() {
         setIsLoading(false);
       })
       .catch((error) => {
-        setError("Error fetching topics. Please try again later."); 
+        setError("Error fetching topics. Please try again later.");
         setIsLoading(false);
       });
   }, []);
+
+  const topicEmojis = {
+    coding: "💻",
+    football: "⚽",
+    cooking: "🍲",
+  };
 
   if (isLoading) {
     return <h2>Loading...</h2>;
   }
 
   if (error) {
-    return <h2>{error}</h2>; 
+    return <h2>{error}</h2>;
   }
 
   return (
-    <div className="topics-container">
-      <ul className="topics">
-        {topics.map((topic) => (
-          <li key={topic.slug} className="topic-item">
-            <Link to={`/articles/topics/${topic.slug}`} className="topic-link">
-              <div className="topic-box">
-                <h2 className="topic-slug">{topic.slug}</h2>
-              </div>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <main>
+      <div className="topics-container">
+        <ul className="topics">
+          {topics.map((topic) => (
+            <li key={topic.slug} className="topic-item">
+              <Link
+                to={`/articles/topics/${topic.slug}`}
+                className="topic-link"
+              >
+                <div className="topic-box">
+                  <h2 className="topic-slug">
+                    {topic.slug} {topicEmojis[topic.slug]}
+                  </h2>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </main>
   );
 }
 

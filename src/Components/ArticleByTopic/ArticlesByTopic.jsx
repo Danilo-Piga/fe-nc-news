@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchArticlesByTopic } from "../../Utils/api";
 import { useState } from "react";
 import ArticleCard from "../ArticleCard/ArticleCard";
-import './ArticleByTopic.css'
+import "./ArticlesByTopic.css";
 
 export default function ArticlesByTopic() {
   const [articles, setArticles] = useState([]);
@@ -16,7 +16,7 @@ export default function ArticlesByTopic() {
       setArticles(articles);
       setIsLoading(false);
     });
-  }, []);
+  }, [topic]);
 
   if (isLoading) {
     return <h2>Loading...</h2>;
@@ -24,9 +24,11 @@ export default function ArticlesByTopic() {
 
   return (
     <>
-      <ul className="article-block">
-        <ArticleCard topic={topic} articles={articles} />
-      </ul>
+      <section>
+        <ul className="article-block">
+          <ArticleCard topic={topic} articles={articles} />
+        </ul>
+      </section>
     </>
   );
 }

@@ -11,7 +11,8 @@
 }
 
 .vote-button.voted {
-  border: 2px solid rgb(32, 151, 198);
+  border: 1px solid rgb(32, 151, 198);
+  border-radius: 20px;
 }
 
 .vote-count {

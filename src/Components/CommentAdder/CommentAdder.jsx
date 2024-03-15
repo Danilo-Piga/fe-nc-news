@@ -1,7 +1,7 @@
 import { postComment } from "../../Utils/api";
 import { useState } from "react";
 import { useParams } from "react-router";
-import '../CommentAdder/CommentAdder.css'
+import "../CommentAdder/CommentAdder.css";
 
 function CommentAdder({ setArticleComments, currentUser, setFetchedComments }) {
   const { username } = currentUser;
@@ -43,7 +43,7 @@ function CommentAdder({ setArticleComments, currentUser, setFetchedComments }) {
         ></textarea>
         <br></br>
         <button type="submit" disabled={!newComment}>
-         Post comment
+          Post comment
         </button>
         <p className="comment-success-message">{commentMessage}</p>
         <br></br>

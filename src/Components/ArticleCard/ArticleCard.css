@@ -9,7 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-} 
+}
 
 .article-card-item {
   margin: 10px;
@@ -25,11 +25,11 @@
 .article-card-link {
   display: block;
   text-decoration: none;
-  color: #202020; 
+  color: #202020;
 }
 
 .article-card-link:hover {
-  color: #0040f2; 
+  color: #0040f2;
 }
 
 .article-card-image {
@@ -53,7 +53,7 @@
 @media screen and (max-width: 600px) {
   .article-card {
     width: 100%;
-    max-width: 300px; 
-    margin: 10px auto; 
+    max-width: 300px;
+    margin: 10px auto;
   }
 }

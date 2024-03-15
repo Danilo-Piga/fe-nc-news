@@ -3,19 +3,24 @@ import { UserContext } from "../userContext";
 import { useContext } from "react";
 import "./Nav.css";
 import Logo from "../../assets/logo.png";
+import Icon from "../../assets/Icon.jpg";
 
 function Nav() {
   const { currentUser } = useContext(UserContext);
   return (
     <nav className="nav">
       <Link to="/">
-        <img src={Logo} alt="Silhouette of Reddit icon, as the home button" className="nav-logo" />
+        <img
+          src={Logo}
+          alt="Silhouette of Reddit icon, as the home button"
+          className="nav-logo"
+        />
       </Link>
       <Link to="/topics" className="nav-link">
         Topics
       </Link>
       <section className="profile">
-        Current user:{" "}
+        <img src={Icon} alt="Silhouette of user icon" />{" "}
         <Link to="/users" className="profile-link">
           {currentUser.username}
         </Link>{" "}

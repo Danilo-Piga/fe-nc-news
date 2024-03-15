@@ -19,7 +19,11 @@ function Users() {
         {users.map((user) => {
           return (
             <li key={user.username} className="user-card">
-              <img src={user.avatar_url} alt={user.username} className="user-icon" />
+              <img
+                src={user.avatar_url}
+                alt={user.username}
+                className="user-icon"
+              />
               <div className="user-info">
                 <h2 className="user-name">{user.username}</h2>
                 <p className="user-kudos">Kudos: {user.kudos}</p>
