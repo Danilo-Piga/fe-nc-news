@@ -26,16 +26,17 @@ main {
   height: 100px;
 }
 
+
+@media screen and (max-width: 600px) {
 .date-time {
   position: absolute;
-  top: 130px;
+  top: 50px;
   right: 20px;
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   color: #333;
 }
 
-@media screen and (max-width: 600px) {
   .home-title {
     font-size: 4rem;
     text-align: center;

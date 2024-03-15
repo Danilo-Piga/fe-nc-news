@@ -38,14 +38,14 @@
   margin-right: 40px;
 }
 
+
+.nav > *:not(:last-child) {
+  margin-right: 10px;
+}
 .nav-logo {
   width: 50px;
   height: 50px;
   margin-left: 20px;
-}
-
-.nav > *:not(:last-child) {
-  margin-right: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -57,11 +57,13 @@
   .nav-link,
   .profile-link {
     font-size: 16px;
+    margin-right: 30px;
   }
 
   .nav-user-icon,
   .nav-logo {
     width: 25px;
     height: 25px;
+    margin-left: 50px;
   }
 }
