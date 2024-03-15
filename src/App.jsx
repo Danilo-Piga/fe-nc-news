@@ -34,11 +34,22 @@ function App() {
           ) : (
             <Routes>
               <Route path="/" element={<Home handleError={handleError} />} />
-              <Route path="/topics" element={<Topics handleError={handleError} />} />
-              <Route path="/users" element={<Users handleError={handleError} />} />
+              <Route
+                path="/topics"
+                element={<Topics handleError={handleError} />}
+              />
+              <Route
+                path="/users"
+                element={<Users handleError={handleError} />}
+              />
               <Route
                 path="/articles/:article_id"
-                element={<SingleArticle currentUser={currentUser} handleError={handleError} />}
+                element={
+                  <SingleArticle
+                    currentUser={currentUser}
+                    handleError={handleError}
+                  />
+                }
               />
               <Route
                 path="/articles/topics/:topic"
@@ -48,7 +59,10 @@ function App() {
                 path="/articles/:article_id/comments"
                 element={<ArticleComments handleError={handleError} />}
               />
-              <Route path="*" element={<ErrorPage message={"404 - Page Not Found"} />} />
+              <Route
+                path="*"
+                element={<ErrorPage message={"404 - Page Not Found"} />}
+              />
             </Routes>
           )}
         </>

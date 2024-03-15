@@ -6,10 +6,10 @@ import "./SingleArticle.css";
 import ArticleComments from "../ArticleComments/ArticleComments";
 import Votes from "../Votes/Votes";
 import CommentAdder from "../CommentAdder/CommentAdder";
-import ErrorPage from "../ErrorPage/ErrorPage"; 
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 function SingleArticle({ currentUser }) {
-  const [article, setArticle] = useState(null); 
+  const [article, setArticle] = useState(null);
   const [articleComments, setArticleComments] = useState([]);
   const [fetchedComments, setFetchedComments] = useState(false);
   const [error, setError] = useState(null);
@@ -18,14 +18,16 @@ function SingleArticle({ currentUser }) {
   useEffect(() => {
     fetchSingleArticle(article_id)
       .then(({ article }) => setArticle(article))
-      .catch((error) => setError("Error fetching article. Please try again later."));
+      .catch((error) =>
+        setError("Error fetching article. Please try again later.")
+      );
   }, [article_id]);
 
   if (error) {
-    return <ErrorPage message={error} />; 
+    return <ErrorPage message={error} />;
   }
 
-  if (!article) { 
+  if (!article) {
     return <p>Loading...</p>;
   }
 

@@ -71,15 +71,15 @@ function fetchUsers() {
 }
 
 function deleteComment(comment_id) {
-  return articlesApi.delete(`/comments/${comment_id}`)
+  return articlesApi
+    .delete(`/comments/${comment_id}`)
     .then((res) => {
-      return res.data; 
+      return res.data;
     })
     .catch((error) => {
       throw error;
     });
 }
-
 
 export {
   fetchArticles,
@@ -90,5 +90,6 @@ export {
   postComment,
   incrementVotes,
   decrementVotes,
-  fetchArticlesByTopic, deleteComment,
+  fetchArticlesByTopic,
+  deleteComment,
 };
