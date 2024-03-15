@@ -19,7 +19,7 @@ export default function ArticlesByTopic() {
   }, [topic]);
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <img className="Preloader" src="https://i.gifer.com/ZWdx.gif" alt="Preloader gif"/>;
   }
 
   return (

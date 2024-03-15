@@ -36,7 +36,10 @@ function ArticleComments({
     });
   }, [fetchedComments, article_id]);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <>
+  <p className="loading-text">Loading ...</p>
+  <img className="Preloader" src="https://i.gifer.com/ZWdx.gif" alt="Preloader gif"/>;
+  </>
   if (!isLoading && articleComments.length === 0) return <p>No comments</p>;
 
   return (

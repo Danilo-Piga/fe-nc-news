@@ -22,6 +22,19 @@ main {
   padding: 20px;
 }
 
+.Preloader {
+  height: 100px;
+}
+
+.date-time {
+  position: absolute;
+  top: 130px;
+  right: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  color: #333;
+}
+
 @media screen and (max-width: 600px) {
   .home-title {
     font-size: 4rem;

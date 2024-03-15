@@ -27,7 +27,10 @@ function Topics() {
   };
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <>
+    <p className="loading-text">Loading ...</p>
+    <img className="Preloader" src="https://i.gifer.com/ZWdx.gif" alt="Preloader gif"/>;
+    </>;
   }
 
   if (error) {
