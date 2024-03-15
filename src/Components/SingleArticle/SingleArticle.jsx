@@ -28,7 +28,7 @@ function SingleArticle({ currentUser }) {
   }
 
   if (!article) {
-    return <p>Loading...</p>;
+    return <img className="Preloader" src="https://i.gifer.com/ZWdx.gif" alt="Preloader gif"/>;
   }
 
   return (
